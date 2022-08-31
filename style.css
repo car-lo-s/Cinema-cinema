@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.tp{
+    /* width: 90%; */
+    /* background-color: #B90500; */
+    margin: auto;
+    min-height: 120px;
+    align-items: center;
+}
+.tp-um{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.tp-um h1{
+    font-size: 60px;
+    font-family: 'Lobster', cursive;
+}
+.tp-campo{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+.tp-campo input{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 300px;
+}
+.tp-lupa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-left: 1px solid black;
+}
+.tp-lupa:hover{
+    background-color: lightslategray;
+    cursor: pointer;
+}
+
+
+.tp-dois{
+    background-color: #B90500;
+}
+.tp-dois ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tp-dois li{
+    padding: 10px
+    20px;
+}
+.tp-dois li:hover{
+    background-color: #da251f;
+}
+.tp-dois ul li a{
+    padding: 15px;
+    color: white;
+}
+li{
+    color: white;
+    cursor: pointer;
+}
+.tp-dois a{
+    color: white;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+    padding: 20px 0px;
+}
+.img{
+    width: 300px;
+    height: 400px;
+    background-size: 300px;
+}
+.info-dado{
+    margin: 0px 50px;
+}
+.info-dado p{
+    margin: 30px 0px 30px 0px;
+}
+.info-titulo{
+    font-size: 40px;
+    /* padding: 10px; */
+    
+    text-align: center;
+}
+
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    /* background-color: red; */
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cd-input div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cd-input input{
+    width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    /* margin: 10px 0px 20px 0px; */
+}
+.cd-text{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.cd-text textarea{
+    margin: auto;
+    font-size: 16px;
+    width: 500px;
+}
+.btn{
+    background-color: #da251f;
+    margin: 20px;
+    padding: 10px 25px;
+    font-size: 25px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.edicao{
+    display: flex;
+    justify-content: center;
+}
+.edicao td{
+     width: 100px;
+     padding: 5px;
+     border:2px solid black;
+     text-align: center;
+}
+.edicao-btn{
+    cursor: pointer;
+}
