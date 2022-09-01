@@ -96,17 +96,31 @@ if($nome && $genero && $tipo && $roteirista && $caminho && $descricao){
       </section>
       <section class="edicao">
         <table>
+          <tr>
+            <th>Nome</th>
+            <th>Genero</th>
+            <th>roteirista</th>
+            <th>Editar</th>
+            <th>Apagar</th> 
+          </tr>
           <?php foreach ($dados as $a): ?>
             <tr>
               <td><?= $a->getnome(); ?></td>
               <td><?= $a->getgenero(); ?></td>
               <td><?= $a->getroteirista(); ?></td>
-              <td class='edicao-btn'>Apagar</td>
-              <td class='edicao-btn'>Editar</td>
+              <td class='edicao-btn btne' onclick="editar('<?=$a->getnome();?>')">Editar</td>
+              <td class='edicao-btn btna' onclick="apagar('<?=$a->getnome();?>')">Apagar</td> 
             </tr>
           <?php endforeach; ?>
         </table>
       </section>
+    </section>
+    <section class='tela-apagar'>
+            <div class='tela-apagar-s'>Sim</div>
+            <div class='tela-apagar-n'>Não</div>
+    </section>
+    <section class='tela-editar'>
+
     </section>
     <script src="./JS/manipulacao.js"></script>
   </body>

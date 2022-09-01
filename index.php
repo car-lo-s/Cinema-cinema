@@ -79,7 +79,6 @@ $tipo = filter_input(INPUT_GET,'tela');
             </div>
             </section>    
             <?php endif;?>
-
         <?php endforeach; ?>
     </section>
 </body>

@@ -16,7 +16,7 @@
     /* width: 90%; */
     /* background-color: #B90500; */
     margin: auto;
-    min-height: 120px;
+    min-height: 100px;
     align-items: center;
 }
 .tp-um{
@@ -110,7 +110,7 @@ li{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
     width: 100%;
     /* background-color: red; */
 }
@@ -153,17 +153,64 @@ form{
     cursor: pointer;
 }
 
-
+table{
+    border: 2px solid black;
+    margin-bottom: 100px;
+}
+th{
+    background-color: #da251f;
+    padding: 5px;
+    color: white;
+}
 .edicao{
     display: flex;
     justify-content: center;
 }
 .edicao td{
-     width: 100px;
+     width: 200px;
      padding: 5px;
      border:2px solid black;
      text-align: center;
 }
 .edicao-btn{
     cursor: pointer;
+}
+.edicao-btn a{
+    color: black;
+}
+.btne{
+    background-color: #28A745;
+    color: white;
+    border-radius: 3px;
+}
+.btna{
+    background-color: #C82333;
+    color: white;
+    border-radius: 3px;
+}
+.tela-apagar{
+    width: 700px;
+    height: 150px;
+    border: 2px solid black;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 100px;
+    right: 35%;
+    border-radius: 5px;
+    margin: auto;
+    background-color: white;
+}
+.tela-apagar div{
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    cursor: pointer;
+    
 }
