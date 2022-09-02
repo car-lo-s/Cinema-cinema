@@ -10,6 +10,7 @@ $roteirista = filter_input(INPUT_GET,'roteiro');
 $caminho = filter_input(INPUT_GET,'caminho');
 $descricao = filter_input(INPUT_GET,'descricao');
 
+
 if($nome && $genero && $tipo && $roteirista && $caminho && $descricao){
     $filmeDao->add($nome,$genero,$tipo,$roteirista,$caminho,$descricao);
 }
@@ -109,15 +110,11 @@ if($nome && $genero && $tipo && $roteirista && $caminho && $descricao){
               <td><?= $a->getgenero(); ?></td>
               <td><?= $a->getroteirista(); ?></td>
               <td class='edicao-btn btne' onclick="editar('<?=$a->getnome();?>')">Editar</td>
-              <td class='edicao-btn btna' onclick="apagar('<?=$a->getnome();?>')">Apagar</td> 
+              <td class='edicao-btn btna' onclick="apagar('<?=$a->getnome();?>')"><a href="php\confirmacao.php/?identificacao=<?=$a->getid();?>">Apagar</a></td> 
             </tr>
           <?php endforeach; ?>
         </table>
       </section>
-    </section>
-    <section class='tela-apagar'>
-            <div class='tela-apagar-s'>Sim</div>
-            <div class='tela-apagar-n'>Não</div>
     </section>
     <section class='tela-editar'>
 

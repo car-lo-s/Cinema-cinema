@@ -37,4 +37,9 @@ class filmeDAO{
       $sql->execute();
       header("Location: edicao.php");
      }
+     public function delete($id){
+         $sql = $this->pdo->prepare("DELETE FROM filmedado WHERE  id=:id");
+         $sql->bindValue(":id",$id);
+         $sql->execute();
+     }
 }

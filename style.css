@@ -188,6 +188,12 @@ th{
     color: white;
     border-radius: 3px;
 }
+.btne a{
+    color: white;
+}
+.btna a{
+    color: white;
+}
 .tela-apagar{
     width: 700px;
     height: 150px;
