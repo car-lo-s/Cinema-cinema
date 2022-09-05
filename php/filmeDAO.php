@@ -36,10 +36,24 @@ class filmeDAO{
       $sql->bindValue(':tipo',$tipo);
       $sql->execute();
       header("Location: edicao.php");
+     exit;
      }
      public function delete($id){
          $sql = $this->pdo->prepare("DELETE FROM filmedado WHERE  id=:id");
          $sql->bindValue(":id",$id);
          $sql->execute();
+     }
+     public function att($identidade,$nome,$genero,$tipo,$roteirista,$caminho,$descricao){
+         $sql = $this->pdo->prepare("UPDATE filmedado SET nome = :nome, descricao = :descricao, genero = :genero, roteirista = :roteirista, caminho = :caminho, tipo = :tipo WHERE id = :identidade ");
+         $sql->bindValue(':nome',$nome);
+         $sql->bindValue(':identidade',$identidade);
+         $sql->bindValue(':genero',$genero);
+         $sql->bindValue(':tipo',$tipo);
+         $sql->bindValue(':roteirista',$roteirista);
+         $sql->bindValue(':caminho',$caminho);
+         $sql->bindValue(':descricao',$descricao);
+         $sql->execute();
+         header("Location: edicao.php");
+         exit;
      }
 }

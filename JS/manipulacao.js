@@ -13,5 +13,9 @@ function apagar(a){
     tela.style.display ='flex'
 }
 function editar(a){
-    alert(a);
+    let id = document.querySelector("input[name=identificacao]").value = a
+    let info = document.querySelector('.tela-editar')
+    info.style.display = 'flex'
+    let cad = document.querySelector('.cadastro')
+    cad.style.display='none'
 }

@@ -14,6 +14,21 @@ $descricao = filter_input(INPUT_GET,'descricao');
 if($nome && $genero && $tipo && $roteirista && $caminho && $descricao){
     $filmeDao->add($nome,$genero,$tipo,$roteirista,$caminho,$descricao);
 }
+
+$novoId = filter_input(INPUT_GET,'identificacao');
+$novoNome = filter_input(INPUT_GET,'novonome');
+$novoGenero = filter_input(INPUT_GET,'novogenero');
+$novoTipo = filter_input(INPUT_GET,'novotipo');
+$novoRoteirista = filter_input(INPUT_GET,'novoroteiro');
+$novoCaminho = filter_input(INPUT_GET,'novocaminho');
+$novoDescricao = filter_input(INPUT_GET,'novodescricao');
+
+
+if($novoId && $novoNome && $novoGenero && $novoTipo && $novoRoteirista && $novoCaminho && $novoDescricao){
+    $filmeDao->att($novoId, $novoNome, $novoGenero, $novoTipo, $novoRoteirista, $novoCaminho, $novoDescricao);
+    
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -62,9 +77,7 @@ if($nome && $genero && $tipo && $roteirista && $caminho && $descricao){
           <li onclick="cad()">
             Cadastro
           </li>
-          <li onclick="edit()">
-           Edição
-          </li>
+          
         </ul>
       </nav>
     </header>
@@ -98,18 +111,22 @@ if($nome && $genero && $tipo && $roteirista && $caminho && $descricao){
       <section class="edicao">
         <table>
           <tr>
+            <th>ID</th>
             <th>Nome</th>
+            <th>Tipo</th>
             <th>Genero</th>
-            <th>roteirista</th>
+            <!-- <th>roteirista</th> -->
             <th>Editar</th>
             <th>Apagar</th> 
           </tr>
           <?php foreach ($dados as $a): ?>
             <tr>
+              <td><?= $a->getid(); ?></td>
               <td><?= $a->getnome(); ?></td>
+              <td><?= $a->gettipo(); ?></td>
               <td><?= $a->getgenero(); ?></td>
-              <td><?= $a->getroteirista(); ?></td>
-              <td class='edicao-btn btne' onclick="editar('<?=$a->getnome();?>')">Editar</td>
+              <!-- <td><?= $a->getroteirista(); ?></td> -->
+              <td class='edicao-btn btne' onclick="editar('<?=$a->getid();?>')">Editar</td>
               <td class='edicao-btn btna' onclick="apagar('<?=$a->getnome();?>')"><a href="php\confirmacao.php/?identificacao=<?=$a->getid();?>">Apagar</a></td> 
             </tr>
           <?php endforeach; ?>
@@ -117,7 +134,33 @@ if($nome && $genero && $tipo && $roteirista && $caminho && $descricao){
       </section>
     </section>
     <section class='tela-editar'>
-
+      <form action="" method="get">
+          <div class="cd-input">
+            <div> 
+                <input type="text" name="identificacao" id="" placeholder=""  readonly="readonly" />
+              </div>
+            <div> 
+                <input type="text" name="novonome" id="" placeholder="Nome:"/>
+              </div>
+              <div>
+                <input type="text" name="novogenero" id="" placeholder="Genero: "/>
+              </div>
+              <div>
+                <input type="text" name="novotipo" id="" placeholder="Tipo: "/>
+              </div>
+              <div>
+                <input type="text" name="novoroteiro" id="" placeholder="Roteirista:"/>
+              </div>
+              <div>
+                <input type="text" name="novocaminho" id="" placeholder="Caminho arquivo: "/>
+              </div>
+          </div>
+          <div class="cd-text">
+            <textarea name="novodescricao" id="" cols="30" rows="10" placeholder="Descrição do filme:"></textarea>
+          </div>
+          
+          <input type="submit" value="Alterar" class="btn">
+        </form>
     </section>
     <script src="./JS/manipulacao.js"></script>
   </body>

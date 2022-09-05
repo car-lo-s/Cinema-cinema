@@ -94,10 +94,10 @@ li{
     background-size: 300px;
 }
 .info-dado{
-    margin: 0px 50px;
+    margin: 0px 30px;
 }
 .info-dado p{
-    margin: 30px 0px 30px 0px;
+    margin: 30px 0px 10px 0px;
 }
 .info-titulo{
     font-size: 40px;
@@ -155,7 +155,7 @@ form{
 
 table{
     border: 2px solid black;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 th{
     background-color: #da251f;
@@ -219,4 +219,7 @@ th{
     margin: 20px;
     cursor: pointer;
     
+}
+.tela-editar{
+    display: none;
 }
