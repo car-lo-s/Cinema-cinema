@@ -56,4 +56,23 @@ class filmeDAO{
          header("Location: edicao.php");
          exit;
      }
+     public function search($pesquisa){
+      $lista = [];
+         $sql = $this->pdo->query("SELECT*FROM filmedado WHERE nome LIKE '%$pesquisa%'");
+         if($sql->rowCount()>0){
+            $data = $sql->fetchAll();
+            foreach ($data as $item) {
+               $filme = new filme();
+               $filme->setid($item['id']);
+               $filme->setnome($item['nome']);
+               $filme->setdescricao($item['descricao']);
+               $filme->setgenero($item['genero']);
+               $filme->setroteirista($item['roteirista']);
+               $filme->setcaminho($item['caminho']);
+               $filme->settipo($item['tipo']);
+               $lista[] = $filme;
+            }
+         }
+         return $lista;
+     }
 }

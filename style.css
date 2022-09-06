@@ -30,29 +30,31 @@
     font-size: 60px;
     font-family: 'Lobster', cursive;
 }
-.tp-campo{
+
+#pesquisa div{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
-}
-.tp-campo input{
-    border: none;
-    outline: none;
-    padding: 5px;
-    width: 300px;
-}
-.tp-lupa{
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    border: 2px solid black;
+    /* padding: 5px; */
+    width: 300px;
+    border-radius: 2px;
+}
+#pesquisa input{
+    border: none;
+    font-size: 18px;
+    outline: none;
+    color: lightslategray;
+    margin-left: 5px;
+}
+#pesquisa button{
+    border: none;
+    background-color: white;
     padding: 10px;
-    border-left: 1px solid black;
-}
-.tp-lupa:hover{
-    background-color: lightslategray;
     cursor: pointer;
+    border-left: 2px solid black;
 }
-
 
 .tp-dois{
     background-color: #B90500;

@@ -1,6 +1,8 @@
 function cad(){
     let cad = document.querySelector('.cadastro')
     cad.style.display='flex'
+    let info = document.querySelector('.tela-editar')
+    info.style.display = 'none'
 }
 
 function edit(){
